@@ -1,0 +1,290 @@
+display/drm.c:601:2: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ info("drm: Found plane_id: %u connector_id: %d crtc_id: %d",
+ ^
+display/drm.c:601:2: warning: %d in format string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ info("drm: Found plane_id: %u connector_id: %d crtc_id: %d",
+ ^
+display/drm.c:604:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ info("drm: %dx%d (%dmm X% dmm) pixel format %c%c%c%c",
+ ^
+display/drm.c:604:2: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ info("drm: %dx%d (%dmm X% dmm) pixel format %c%c%c%c",
+ ^
+display/drm.c:604:2: warning: %d in format string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ info("drm: %dx%d (%dmm X% dmm) pixel format %c%c%c%c",
+ ^
+display/drm.c:604:2: warning: %d in format string (no. 4) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+ info("drm: %dx%d (%dmm X% dmm) pixel format %c%c%c%c",
+ ^
+display/drm.c:694:36: style:inconclusive: Function 'drm_wait_vsync' argument 1 names different: declaration 'drv' definition 'disp_drv'. [funcArgNamesDifferent]
+void drm_wait_vsync(lv_disp_drv_t *disp_drv)
+                                   ^
+display/drm.h:47:37: note: Function 'drm_wait_vsync' argument 1 names different: declaration 'drv' definition 'disp_drv'.
+void drm_wait_vsync(lv_disp_drv_t * drv);
+                                    ^
+display/drm.c:694:36: note: Function 'drm_wait_vsync' argument 1 names different: declaration 'drv' definition 'disp_drv'.
+void drm_wait_vsync(lv_disp_drv_t *disp_drv)
+                                   ^
+display/drm.c:721:31: style:inconclusive: Function 'drm_flush' argument 1 names different: declaration 'drv' definition 'disp_drv'. [funcArgNamesDifferent]
+void drm_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p)
+                              ^
+display/drm.h:46:32: note: Function 'drm_flush' argument 1 names different: declaration 'drv' definition 'disp_drv'.
+void drm_flush(lv_disp_drv_t * drv, const lv_area_t * area, lv_color_t * color_p);
+                               ^
+display/drm.c:721:31: note: Function 'drm_flush' argument 1 names different: declaration 'drv' definition 'disp_drv'.
+void drm_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p)
+                              ^
+display/fbdev.c:194:23: style: Variable 'location' is assigned a value that is never used. [unreadVariable]
+    long int location = 0;
+                      ^
+display/fbdev.c:195:28: style: Variable 'byte_location' is assigned a value that is never used. [unreadVariable]
+    long int byte_location = 0;
+                           ^
+display/fbdev.c:196:32: style: Variable 'bit_location' is assigned a value that is never used. [unreadVariable]
+    unsigned char bit_location = 0;
+                               ^
+gtkdrv/gtkdrv.c:320:5: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+    run_gtk = FALSE;
+    ^
+gtkdrv/gtkdrv.c:156:13: style: The scope of the variable 'p' can be reduced. [variableScope]
+    int32_t p;
+            ^
+indev/AD_touch.c:194:17: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+                break;
+                ^
+indev/AD_touch.c:241:17: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+                break;
+                ^
+indev/FT5406EE8.c:95:34: error: Uninitialized variable: x [uninitvar]
+        x = (uint32_t)((uint32_t)x * 320) / 2048;
+                                 ^
+indev/FT5406EE8.c:96:34: error: Uninitialized variable: y [uninitvar]
+        y = (uint32_t)((uint32_t)y * 240) / 2048;
+                                 ^
+indev/XPT2046.c:64:13: style: The scope of the variable 'buf' can be reduced. [variableScope]
+    uint8_t buf;
+            ^
+indev/xkb.c:205:10: style: The scope of the variable 'buffer' can be reduced. [variableScope]
+    char buffer[4] = { 0, 0, 0, 0 };
+         ^
+indev/xkb.c:69:0: information: Skipping configuration 'USE_XKB;XKB_KEY_MAP' since the value of 'XKB_KEY_MAP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  struct xkb_rule_names names = XKB_KEY_MAP;
+^
+wayland/smm.c:393:8: style: The scope of the variable 'ret' can be reduced. [variableScope]
+   int ret;
+       ^
+wayland/smm.c:394:11: style: The scope of the variable 'buf_sz' can be reduced. [variableScope]
+   size_t buf_sz;
+          ^
+wayland/smm.c:564:9: style: The scope of the variable 'name' can be reduced. [variableScope]
+   char name[] = ("/" SMM_FD_NAME "-XXXXX");
+        ^
+wayland/smm.c:565:18: style: The scope of the variable 'attempts' can be reduced. [variableScope]
+   unsigned char attempts = 0;
+                 ^
+wayland/smm.c:566:9: style: The scope of the variable 'opened' can be reduced. [variableScope]
+   bool opened = false;
+        ^
+win32drv/win32drv.c:1178:29: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+                            ? LV_INDEV_STATE_PR
+                            ^
+indev/AD_touch.c:130:0: style: The function 'ad_touch_handler' is never used. [unusedFunction]
+
+^
+indev/AD_touch.c:74:0: style: The function 'ad_touch_init' is never used. [unusedFunction]
+
+^
+indev/AD_touch.c:104:0: style: The function 'ad_touch_read' is never used. [unusedFunction]
+
+^
+display/drm.c:803:0: style: The function 'drm_exit' is never used. [unusedFunction]
+
+^
+display/drm.c:721:0: style: The function 'drm_flush' is never used. [unusedFunction]
+
+^
+display/drm.c:769:0: style: The function 'drm_get_sizes' is never used. [unusedFunction]
+
+^
+display/drm.c:781:0: style: The function 'drm_init' is never used. [unusedFunction]
+
+^
+indev/evdev.c:59:0: style: The function 'evdev_init' is never used. [unusedFunction]
+
+^
+indev/evdev.c:108:0: style: The function 'evdev_read' is never used. [unusedFunction]
+
+^
+display/fbdev.c:164:0: style: The function 'fbdev_exit' is never used. [unusedFunction]
+
+^
+display/fbdev.c:175:0: style: The function 'fbdev_flush' is never used. [unusedFunction]
+
+^
+display/fbdev.c:272:0: style: The function 'fbdev_get_sizes' is never used. [unusedFunction]
+
+^
+display/fbdev.c:91:0: style: The function 'fbdev_init' is never used. [unusedFunction]
+
+^
+display/fbdev.c:283:0: style: The function 'fbdev_set_offset' is never used. [unusedFunction]
+
+^
+indev/FT5406EE8.c:71:0: style: The function 'ft5406ee8_init' is never used. [unusedFunction]
+
+^
+indev/FT5406EE8.c:81:0: style: The function 'ft5406ee8_read' is never used. [unusedFunction]
+
+^
+gtkdrv/gtkdrv.c:141:0: style: The function 'gtkdrv_flush_cb' is never used. [unusedFunction]
+
+^
+gtkdrv/gtkdrv.c:73:0: style: The function 'gtkdrv_init' is never used. [unusedFunction]
+
+^
+gtkdrv/gtkdrv.c:182:0: style: The function 'gtkdrv_keyboard_read_cb' is never used. [unusedFunction]
+
+^
+gtkdrv/gtkdrv.c:174:0: style: The function 'gtkdrv_mouse_read_cb' is never used. [unusedFunction]
+
+^
+gtkdrv/gtkdrv.c:115:0: style: The function 'gtkdrv_tick_get' is never used. [unusedFunction]
+
+^
+indev/libinput.c:224:0: style: The function 'libinput_deinit_state' is never used. [unusedFunction]
+
+^
+indev/libinput.c:104:0: style: The function 'libinput_find_dev' is never used. [unusedFunction]
+
+^
+indev/libinput.c:187:0: style: The function 'libinput_init' is never used. [unusedFunction]
+
+^
+indev/libinput.c:248:0: style: The function 'libinput_read' is never used. [unusedFunction]
+
+^
+indev/libinput.c:143:0: style: The function 'libinput_set_file' is never used. [unusedFunction]
+
+^
+win32drv/win32drv.c:213:0: style: The function 'lv_win32_add_all_input_devices_to_group' is never used. [unusedFunction]
+
+^
+win32drv/win32drv.c:309:0: style: The function 'lv_win32_init' is never used. [unusedFunction]
+
+^
+display/R61581.c:129:0: style: The function 'r61581_fill' is never used. [unusedFunction]
+
+^
+display/R61581.c:75:0: style: The function 'r61581_flush' is never used. [unusedFunction]
+
+^
+display/R61581.c:55:0: style: The function 'r61581_init' is never used. [unusedFunction]
+
+^
+display/R61581.c:168:0: style: The function 'r61581_map' is never used. [unusedFunction]
+
+^
+sdl/sdl_gpu.c:92:0: style: The function 'sdl_disp_drv_init' is never used. [unusedFunction]
+
+^
+sdl/sdl.c:111:0: style: The function 'sdl_init' is never used. [unusedFunction]
+
+^
+display/SHARP_MIP.c:160:0: style: The function 'sharp_mip_com_inversion' is never used. [unusedFunction]
+
+^
+display/SHARP_MIP.c:103:0: style: The function 'sharp_mip_flush' is never used. [unusedFunction]
+
+^
+display/SHARP_MIP.c:98:0: style: The function 'sharp_mip_init' is never used. [unusedFunction]
+
+^
+display/SHARP_MIP.c:151:0: style: The function 'sharp_mip_rounder' is never used. [unusedFunction]
+
+^
+display/SHARP_MIP.c:139:0: style: The function 'sharp_mip_set_px' is never used. [unusedFunction]
+
+^
+wayland/smm.c:231:0: style: The function 'smm_acquire' is never used. [unusedFunction]
+
+^
+wayland/smm.c:163:0: style: The function 'smm_create' is never used. [unusedFunction]
+
+^
+wayland/smm.c:145:0: style: The function 'smm_deinit' is never used. [unusedFunction]
+
+^
+wayland/smm.c:136:0: style: The function 'smm_init' is never used. [unusedFunction]
+
+^
+wayland/smm.c:335:0: style: The function 'smm_latest' is never used. [unusedFunction]
+
+^
+wayland/smm.c:269:0: style: The function 'smm_map' is never used. [unusedFunction]
+
+^
+wayland/smm.c:343:0: style: The function 'smm_next' is never used. [unusedFunction]
+
+^
+wayland/smm.c:184:0: style: The function 'smm_resize' is never used. [unusedFunction]
+
+^
+wayland/smm.c:157:0: style: The function 'smm_setctx' is never used. [unusedFunction]
+
+^
+display/SSD1963.c:150:0: style: The function 'ssd1963_flush' is never used. [unusedFunction]
+
+^
+display/SSD1963.c:52:0: style: The function 'ssd1963_init' is never used. [unusedFunction]
+
+^
+display/SSD1963.c:208:0: style: The function 'ssd1963_io_init' is never used. [unusedFunction]
+
+^
+display/SSD1963.c:214:0: style: The function 'ssd1963_reset' is never used. [unusedFunction]
+
+^
+display/ST7565.c:174:0: style: The function 'st7565_fill' is never used. [unusedFunction]
+
+^
+display/ST7565.c:136:0: style: The function 'st7565_flush' is never used. [unusedFunction]
+
+^
+display/ST7565.c:97:0: style: The function 'st7565_init' is never used. [unusedFunction]
+
+^
+display/ST7565.c:205:0: style: The function 'st7565_map' is never used. [unusedFunction]
+
+^
+display/UC1610.c:135:0: style: The function 'uc1610_flush_cb' is never used. [unusedFunction]
+
+^
+display/UC1610.c:92:0: style: The function 'uc1610_init' is never used. [unusedFunction]
+
+^
+display/UC1610.c:194:0: style: The function 'uc1610_rounder_cb' is never used. [unusedFunction]
+
+^
+display/UC1610.c:177:0: style: The function 'uc1610_set_px_cb' is never used. [unusedFunction]
+
+^
+indev/xkb.c:81:0: style: The function 'xkb_deinit_state' is never used. [unusedFunction]
+
+^
+indev/xkb.c:49:0: style: The function 'xkb_init' is never used. [unusedFunction]
+
+^
+indev/xkb.c:143:0: style: The function 'xkb_process_key' is never used. [unusedFunction]
+
+^
+indev/xkb.c:99:0: style: The function 'xkb_set_keymap' is never used. [unusedFunction]
+
+^
+indev/XPT2046.c:50:0: style: The function 'xpt2046_init' is never used. [unusedFunction]
+
+^
+indev/XPT2046.c:60:0: style: The function 'xpt2046_read' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
